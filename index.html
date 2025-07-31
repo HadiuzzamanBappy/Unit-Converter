@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Unit Converter</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="res/css/bootstrap.min.css">
+    <link rel="stylesheet" href="res/css/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="res/css/style.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="btn theme-toggle-button" title="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+    </button>
+
+    <!-- Main Centering Container -->
+    <div class="main-container">
+        <div class="col-lg-5 col-md-8 col-sm-10 col-11">
+            <div class="glass-card p-4">
+
+                <h1 class="text-center mb-4">Unit Converter</h1>
+
+                <!-- Category Selection as Button Group -->
+                <div id="category-selector" class="btn-group w-100 mb-4" role="group" aria-label="Unit Categories">
+                    <input type="radio" class="btn-check" name="category" id="length" value="length" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="length"><i class="bi bi-rulers"></i><span class="d-none d-sm-inline"> Length</span></label>
+
+                    <input type="radio" class="btn-check" name="category" id="weight" value="weight" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="weight"><i class="bi bi-box"></i><span class="d-none d-sm-inline"> Weight</span></label>
+
+                    <input type="radio" class="btn-check" name="category" id="temperature" value="temperature" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="temperature"><i class="bi bi-thermometer-half"></i><span class="d-none d-sm-inline"> Temp</span></label>
+
+                    <input type="radio" class="btn-check" name="category" id="time" value="time" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="time"><i class="bi bi-clock"></i><span class="d-none d-sm-inline"> Time</span></label>
+                </div>
+
+                <!-- Conversion Block -->
+                <div class="conversion-wrapper">
+                    <!-- From Section -->
+                    <div class="conversion-area">
+                        <input type="number" class="form-control form-control-lg" id="inputValue" placeholder="0" step="any">
+                        <select class="form-select" id="fromUnit"></select>
+                    </div>
+
+                    <!-- Swap Icon -->
+                    <div class="text-center my-2">
+                        <button id="swap-units" class="btn btn-icon" title="Swap Units">
+                            <i class="bi bi-arrow-down-up"></i>
+                        </button>
+                    </div>
+
+                    <!-- To Section -->
+                    <div class="conversion-area">
+                        <p id="result" class="form-control form-control-lg result-text">0</p>
+                        <select class="form-select" id="toUnit"></select>
+                    </div>
+                </div>
+
+                <!-- Formula Display -->
+                <div class="text-center mt-3">
+                    <p id="formula" class="formula-text mb-0"> </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="res/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="res/js/script.js"></script>
+</body>
+</html>
